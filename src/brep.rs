@@ -157,11 +157,15 @@ impl BRepKernel {
 
 // An enum to hold exact surface math
 pub enum SurfaceGeometry {
-    Plane { origin: Point3D, normal: Vector3D },
+    Disk {origin: Point3D,normal: Vector3D,radius: f64,},
+    Rectangle {origin: Point3D,u: Vector3D, v: Vector3D,},
     Cylinder { center: Point3D, axis: Vector3D, radius: f64 },
     Cone { apex: Point3D, axis: Vector3D, angle: f64 },
     Sphere { center: Point3D, radius: f64 },
+    // New Variant
+    Triangle { p0: Point3D, p1: Point3D, p2: Point3D },
 }
+s
 
 
 
